@@ -1,0 +1,20 @@
+@media (max-width: 1090px) {
+	.login{
+		flex-direction: row;
+		.form_login{
+			background-color: transparentize($negro, 0.5);
+			margin: 0 auto;		
+		}
+		
+	}
+}
+@media (max-width: 991px) {
+	.login .form_login{
+		width: 45%;
+	}
+}
+@media (max-width: 600px) {
+	.login .form_login{
+		width: 90%;
+	}
+}

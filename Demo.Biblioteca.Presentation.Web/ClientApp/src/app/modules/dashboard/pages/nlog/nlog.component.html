@@ -1,0 +1,42 @@
+<div class="mat-elevation-z8">
+    <mat-table #table matSort [dataSource]="dataSource" matSort [ngClass]="'isMobile'">
+      <ng-container matColumnDef="seleccionar">
+        <mat-header-cell *matHeaderCellDef> Sel. </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <mat-radio-button value="element.id" (change)="selectedRow(element)"></mat-radio-button>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="hostname">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Hostname</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+           <span class="mobile-label">Hostname: </span> {{element.hostname}} 
+         </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="mensaje">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Mensaje </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+           <span class="mobile-label">Mensaje: </span> {{element.mensaje}} 
+         </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="fechaHora">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Fecha </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+           <span class="mobile-label">Fecha: </span> {{element.fechaHora | date:'dd/MM/yyyy'}} 
+         </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator *ngIf="totalSize > 0"
+      [pageSizeOptions]="_paginationService.selectItemsPerPage"
+      showFirstLastButtons
+      #paginator
+      [length]="totalSize"
+      [pageSize]="_paginationService.pageSize"
+      (page)="onPageChange($event)" >
+    </mat-paginator>
+  </div>
+  
+  <div class="buton_in">
+    <button [disabled]="!btnIngresarDisabled" (click)="validarRegistro()" class="btn" mat-raised-button color="mango-digi">Ingresar</button>
+  </div>

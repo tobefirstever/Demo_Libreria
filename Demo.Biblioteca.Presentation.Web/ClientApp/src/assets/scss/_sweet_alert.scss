@@ -1,0 +1,34 @@
+.swal2-top-end{
+	.swal2-popup{
+		max-width: 40em;
+		width: auto;
+		.swal2-header{
+			flex-direction: row!important;
+			justify-content: flex-start;
+			.swal2-error, .swal2-success, .swal2-warning, .swal2-info, .swal2-question{
+				zoom: .5;
+				margin: 0;
+			}
+			h2{
+				font-size: 16px;
+				padding-left: 10px;
+				padding-top: 7px;
+			}
+		}		
+	}
+}
+
+// fix sweet alert button focus
+.swal2-popup .swal2-styled:focus{
+    box-shadow: unset!important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm{
+    background: $magenta_digi!important;
+}
+.swal2-popup .swal2-styled.swal2-cancel{
+    background: $gris_digi!important;
+}
+.swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))!important;
+}

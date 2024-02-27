@@ -1,0 +1,145 @@
+.mat-sidenav-content{
+	
+}
+.fondo{
+	> .mat-card{
+		background: $fondo;
+		border-radius: 0;
+	}
+}
+.content_header{
+	width: 100%;
+	.header{
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		.logo{
+			max-width: 340px;
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.user_info{
+			display: flex;
+			justify-content: space-between;
+			& > div{
+				display: flex;
+				align-items: center;
+				margin: 0 10px;
+				color: $negro;
+				position: relative;
+				.material-icons{
+					color: $gris_digi;
+				}
+				a{
+					display: flex;
+					align-items: center;
+					color: $negro;
+					text-decoration: none;
+				}
+			}
+		}	
+	}
+}
+
+.mat-toolbar{
+	&.mat-magenta{
+		background: $magenta;
+		color: $blanco;
+		height: auto;
+		padding: 0;
+	}
+}
+.header_nav{
+	display: flex;
+	flex-flow: wrap;
+	width: 100%;
+	div{
+		width: 50%;
+		text-align: center;
+		a{
+			display: flex;
+			align-items: center;
+			color: $blanco;
+			text-decoration: none;
+			justify-content: center;
+			height: 64px;
+			&.active{
+				background: $vino_digi;
+			}
+		}
+	}
+}
+
+.user_icon {
+	img{
+		cursor: pointer;
+	}
+	.overlay_user{
+		width: 250px;
+		position: absolute;
+		right: 0;
+		top: 60px;
+		z-index: 99;
+		.indicador_user {
+			width: 0; 
+			height: 0; 
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid $blanco;
+			position: absolute;
+			right: 8px;
+			top: -8px;
+		}
+		a{
+			padding: 5px;
+			&:hover{
+				background: $fondo;
+			}
+		}
+		.mat-card-subtitle{
+			font-size: 12px;
+		}
+		.mat-card-content{
+			border-bottom: 1px solid $fondo;
+			border-top: 1px solid $fondo;
+			padding: 8px 0;
+			margin-bottom: 8px;
+		}
+		.mat-card-footer{
+			a{
+				margin: 0 16px 8px 16px;
+			}
+		}
+	}
+}
+
+// responsive
+@media (max-width: 330px) {
+	.content_header{
+		.header{
+			.user_info{
+				& > div{
+					position: static;
+				}	
+			} 
+		}
+	}
+	.user_icon{
+		.overlay_user{
+			right: 0;
+			left: 0;
+			width: auto;
+			top: 60px;
+			.indicador_user{
+				right: 33px;
+			}
+		}
+	}
+}
+
+.logout{
+	cursor: pointer;
+}

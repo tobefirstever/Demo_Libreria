@@ -1,0 +1,10 @@
+<div class="main" [ngClass]="getRouteClass()">
+	<app-header></app-header>
+	<div class="ml" (click)="hideUserOptions()">
+		<app-head-content></app-head-content>
+		<div class="contenido">
+			<router-outlet></router-outlet>			
+		</div>
+		<app-footer></app-footer>		
+	</div>
+</div>

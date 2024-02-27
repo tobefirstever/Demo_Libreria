@@ -1,0 +1,194 @@
+@media (max-width: 1090px) {
+	
+}
+@media (max-width: 991px) {
+	.contenido{
+		width: 100%;
+		padding: 16px;
+	}
+	.header_content{
+		padding: 16px;
+		box-sizing: border-box;
+	}
+	.content_header{
+		.header{
+			width: 100%;
+		}
+	}
+	.leyenda_riesgo{
+		.clasif_leyenda{
+			.legend_color{
+				margin: 0 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.row_interna{
+		flex-direction: column;
+	}
+	.leyenda_riesgo{
+		flex-direction: column;
+    	align-items: center;
+		.clasif_leyenda{
+    		width: 100%;
+    		margin-top: 15px;
+			.legend_color{
+				margin: 0 15px;
+				padding: 24px 0;
+			}
+		}
+	}
+	.mat-toolbar{
+		&.mat-gris {
+		    height: auto;
+		    flex-direction: column;
+		    white-space: normal;
+    		text-align: center;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	
+}
+
+@media (max-width: 575px) {
+	.info_score {
+	    flex-direction: column;
+	    align-items: center;
+	    ._score{
+	    	margin-top: 20px;
+	    }
+	    .datos{
+	    	text-align: center;
+	    }
+	}
+
+	.main_popup{
+		.popup_header{
+			padding-right: 15px;
+			padding-left: 15px;
+			text-align: center;
+		}
+	}
+
+	.leyenda_riesgo{
+		.clasif_leyenda{
+			.legend_color{
+				margin: 0 5px;
+				font-size: 12px;
+			}
+		}
+	}
+	.form_inline{
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+
+@media (max-width: 510px) {
+	.mat-expansion-panel-header{
+		padding: 0 15px!important;
+	}
+
+	.mat-expansion-panel-body{
+		padding: 15px!important;	
+	}
+	.accordion_clear{
+		.mat-expansion-panel{
+			.mat-expansion-panel-header{
+				.mat-expansion-panel-header-title{
+					    font-size: 20px;
+				}
+			}
+		}
+	}
+	.accordion_color{
+		.mat-expansion-panel{
+			.mat-expansion-panel-header{
+				.mat-expansion-panel-header-title{
+					    font-size: 16px;
+				}
+			}
+		}	
+	}
+
+	.accordion_light{
+		.mat-expansion-panel{
+			.mat-expansion-panel-header{
+				.mat-expansion-panel-header-title{
+					    font-size: 14px;
+				}
+			}
+		}	
+	}
+
+	.align_extrem{
+		padding: 7px 0;
+		font-size: 13px;
+	}
+
+	.main_popup{
+		.popup_body{
+			.sol_rechazadas{
+				font-size: 13px;
+			}
+		}
+	}
+
+	.central_riesgos{
+		.carousel{
+			width: 60%;
+		}
+		.date_left{
+			width: 20%;
+		}
+		.date_right{
+			width: 20%;
+		}
+	}
+
+	.title_expansion{
+		.icon_color{
+			.mat-icon{
+	    		left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 384px) {
+	.accordion_clear{
+		.mat-expansion-panel{
+			.mat-expansion-panel-header{
+				.mat-expansion-panel-header-title{
+					    font-size: 16px;
+				}
+			}
+		}
+	}
+	.accordion_color{
+		.mat-expansion-panel{
+			.mat-expansion-panel-header{
+				.mat-expansion-panel-header-title{
+					    font-size: 15px;
+				}
+			}
+		}	
+	}
+
+	.accordion_light{
+		.mat-expansion-panel{
+			.mat-expansion-panel-header{
+				padding-right: 5px!important;
+				padding-left: 5px!important;
+				.mat-expansion-panel-header-title{
+					    font-size: 14px;
+				}
+			}
+		}	
+	}
+}

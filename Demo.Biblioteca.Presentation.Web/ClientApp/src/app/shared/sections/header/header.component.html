@@ -1,0 +1,37 @@
+<div class="fondo">
+    <mat-card>
+        <div class="content_header">
+            <div class="header">
+                <div class="logo">
+                    <a [routerLink]="['/']">
+                        <img src="assets/img/logo_compartamos_h.png" alt="Compartamos">
+                    </a>
+                </div>
+                <div *ngIf="isAuthenticated" class="user_info">
+                    <div class="name">
+                        <a [routerLink]="['/dashboard/nlog']" class="btn btn_circle btn_light" mat-raised-button color="mango-digi">Nueva Consulta</a> <span>&nbsp;</span>
+                    </div>
+                    <div class="user_icon">
+                        <img src="assets/img/user.svg" (click)="ocultar=!ocultar" type="image/svg+xml" width="34">
+                        <mat-card class="overlay_user" *ngIf="ocultar">
+                            <mat-card-header>
+                                <div mat-card-avatar><img src="assets/img/user.svg" type="image/svg+xml" width="45"></div>
+                                <mat-card-title>
+                                    <div><p class="align_extrem">Mijail Castillo </p></div>
+                                </mat-card-title>
+                                <mat-card-subtitle>Usuario: MijailStell</mat-card-subtitle>
+                                <mat-card-subtitle>Oficina: Lima 001</mat-card-subtitle>
+                                <mat-card-subtitle>Categoría: Sistemas</mat-card-subtitle>
+                                <mat-card-subtitle>Teléfono: 997464078</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-footer>
+                                <a class="logout" (click)="logOut()" >Salir</a>
+                            </mat-card-footer>
+                            <div class="indicador_user"></div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

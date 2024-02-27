@@ -1,0 +1,83 @@
+.space20{
+	padding: 15px;
+}
+.login{
+	background: url('assets/img/background.jpg');
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: row-reverse;
+	.form_login{
+		width: 30%;
+		padding: 0 10%;
+		.logo{
+			text-align: center;
+			img{
+				width: 250px;
+			}
+		}	
+		.informacion{
+			h2{
+				color: white;
+				font-size: 24px;
+				text-align: center;
+				line-height: 1.5;
+				font-weight: bold;
+				&.title_light{
+					font-weight: normal;
+				}
+			}
+		}	
+		.formulario{
+			.material-form{
+				display: flex;
+		  		flex-direction: column;
+		  		&> * {
+				  width: 100%;
+				}
+				.mat-form-field{
+					margin-bottom: 15px;
+				}
+				.mat-checkbox{
+					margin-top: 15px;
+					margin-bottom: 15px;
+					.mat-checkbox-layout{
+						color: $blanco;
+					}					
+				}
+				.send{
+					text-align: center;
+					padding-top: 20px;
+					.mat-raised-button.mat-btnCompartamosSecond{
+						background: $mostaza;
+						color: $blanco
+					}
+				}
+				.reset_pass{
+					text-align: center;
+					padding-top: 15px;
+					a{
+						color: $blanco;
+					}
+				}
+				// cambios para la visualizacion en el login
+				.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element{
+					background-color: $mostaza;
+				}
+				.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+					background-color: $mostaza;
+				}
+			}
+			.mat-error{
+				color: $mango;
+				font-weight: bold;
+			}
+			@include formulario_color_inputs($blanco);			
+		}
+	}
+	.image_login{
+		width: 50%;
+	}
+
+
+}

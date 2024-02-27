@@ -1,0 +1,29 @@
+.main_popup{
+	position: relative;
+	.popup_header{
+		background: $mango_digi;
+		color: $blanco;
+	    display: flex;
+	    padding: 40px 0;
+	    justify-content: center;
+		.mat-icon{
+			cursor: pointer;
+			position: absolute;
+			top: 10px;
+    		right: 10px;
+		}
+		h3{
+			font-size: 24px;
+		}
+	}
+	.popup_body{
+		padding: 20px;
+		.sol_rechazadas{
+			margin: 20px 0 40px 0;
+			.align_extrem{
+				padding-bottom: 0;
+			}
+		}
+	}
+
+}

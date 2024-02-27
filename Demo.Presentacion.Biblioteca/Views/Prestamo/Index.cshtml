@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="panel-body"">
+
+    <div class="row">
+        <div class="col-lg-10">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id Prestamo</th>
+                        <th scope="col">Id Libro</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Autoro</th>
+                        <th scope="col">Nombre Usuario</th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in ViewBag.PrestamoModel)
+                {
+                    <tbody>
+                        <tr>
+                            <th scope="row">@item.IdPrestamo</th>
+
+                            <td>@item.IdLibro</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Autor</td>
+                            <td>@item.NombreUsuario</td>
+                        </tr>
+                    </tbody>
+                }
+                </table>
+
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,56 @@
+@mixin accordion_compartamos($class, $background, $mb, $fz, $color, $pa, $pt) {
+	.#{$class} {
+		.mat-expansion-panel{
+			margin-bottom: #{$mb};
+			background: $background;
+			border-radius: 0;
+			&:first-of-type{
+				border-top-right-radius: 0!important;
+				border-top-left-radius: 0!important;
+			}
+			&:last-of-type{
+				margin-bottom: 0;
+				border-bottom-right-radius: 0!important;
+				border-bottom-left-radius: 0!important;
+			}
+			.mat-expansion-panel-header{				
+				.mat-expansion-panel-header-title{
+					font-size: #{$fz};
+					color: $color;
+				}
+				&.mat-expanded{
+					.mat-expansion-indicator{
+						@if $class == 'accordion_light' {
+							transform: rotate(90deg)!important;
+						}
+					}
+				}
+				.mat-expansion-indicator{					
+					&::after{
+						border-width: 0 1px 1px 0;
+						padding: #{$pa};
+						vertical-align: super;
+						color: $color;
+						@if $class == 'accordion_light' {
+							transform: rotate(-45deg);
+						}
+					}
+				}
+			}
+			.mat-expansion-panel-content{
+				background: $blanco;
+				.mat-expansion-panel-body{
+					@if $class == 'accordion_light' {
+						padding-top: #{$pt} !important;						
+					} @else {
+						padding-top: #{$pt};
+					}
+				}
+			}
+		}
+	}
+}
+
+@include accordion_compartamos('accordion_clear', $blanco, '30px', '28px', $magenta_digi, '10px', '0px');
+@include accordion_compartamos('accordion_color', $magenta_digi, '30px', '16px', $blanco, '5px', '16px');
+@include accordion_compartamos('accordion_light', $blanco, 'inherit', 'inherit', $negro, '3px', '0px');

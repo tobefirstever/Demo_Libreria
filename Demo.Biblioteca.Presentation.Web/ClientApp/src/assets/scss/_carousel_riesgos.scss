@@ -1,0 +1,139 @@
+.central_riesgos{
+	margin-top: 100px;
+	display: flex;
+	.date_left{
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		width: 10%;
+		float: left;
+		text-align: right;
+		padding-right: 20px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		.calendario{
+			margin-top: -14px;
+			.mat-form-field-infix{
+				display: none;
+			}
+			.mat-form-field-appearance-legacy .mat-form-field-underline{
+				display: none;
+			}
+			.mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
+			    width: 2em;
+			}
+			.mat-form-field-suffix .mat-icon-button {
+			    height: 3em;
+			    width: 3em;
+			}
+		}
+	}
+	.carousel{
+		width: 80%;
+		float: left;
+		margin-bottom: 100px;
+		margin-top: 7px;
+		.mes_indicador{
+			margin: 0 auto;
+			text-align: center;
+			margin-top: 5px;
+			font-weight: bold;
+			color: $gris;
+		}
+		.owl-nav{
+			button{
+				position: absolute;
+				top:11px;
+				font-size: 40px!important;
+				&:focus, &:hover{
+					outline: none;
+					color: inherit;
+					background: transparent;
+				}
+				&.owl-prev{
+					right: -9px;
+				}
+				&.owl-next{
+					left: -10px;
+				}
+				&.disabled{
+					display: none;
+				}
+			}
+		}
+		.line_middle{
+			border-top: 2px solid $gris_digi;
+			height: 1px;
+			.owl-stage-outer{
+				margin-top: -30px;
+			}
+		}
+	}
+	.date_right{
+		width: 10%;
+		float: left;
+		padding-left: 20px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+}
+
+.in_rojo{
+	@include ball_corona($rojo, 50, 4);
+	margin: 0 auto;
+}
+.in_naranja{
+	@include ball_corona($naranja, 50, 4);
+	margin: 0 auto;
+}
+.in_amarillo{
+	@include ball_corona($amarillo, 50, 4);
+	margin: 0 auto;
+	color: $gris;
+}
+.in_verde_claro{
+	@include ball_corona($verde_claro, 50, 4);
+	margin: 0 auto;
+}
+.in_verde{
+	@include ball_corona($verde, 50, 4);
+	margin: 0 auto;
+}
+
+.in_verde_credito{
+	@include ball_corona_cre($verde, 6, 3)
+}
+
+.in_gris_credito{
+	@include ball_corona_cre($gris, 6, 3)
+}
+
+.in_rojo_credito{
+	@include ball_corona_cre($rojo, 6, 3)
+}
+
+.status_rojo{
+	@include bg_color($blanco, $rojo);
+}
+.status_naranja{
+	@include bg_color($blanco, $naranja);
+}
+.status_amarillo{
+	@include bg_color($gris, $amarillo);
+}
+.status_verde_claro{
+	@include bg_color($blanco, $verde_claro);
+}
+.status_verde{
+	@include bg_color($blanco, $verde);
+}
+
+.line_middle{
+	border-top: 2px solid $gris_digi;
+	height: 1px;
+	.owl-stage-outer{
+		margin-top: -30px;
+	}
+}
